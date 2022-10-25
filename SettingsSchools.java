@@ -1,14 +1,18 @@
 package SchoolGrade;
 
 public class SettingsSchools {
-    String[] SchollMolo = new String[14];
+    String[] SchollMolo = new String[15];
     void SetSchollMolo(){
-        for(int i = 0, b = 1; i <= 13; i++, b++) {
+        for(int i = 0, b = 1; i <= 14; i++, b++) {
             if(i == 3 || i == 6 || i == 7 || i == 10){
                 if(i == 13){
                     continue;
                 }
                 SchollMolo[i] = "Гимназия № " + b;
+                continue;
+            }
+            if (b == 15) {
+                SchollMolo[i] = "Начальная № " + b;
                 continue;
             }
             SchollMolo[i] = "Средняя школа № " + b;
@@ -125,12 +129,18 @@ public class SettingsSchools {
     }
 
     void LocationSchool(){
-        for(int i = 0, b = 1; i <= 13; i++, b++) {
+        for(int i = 0, b = 1; i <= 14; i++, b++) {
             if(i == 3 || i == 6 || i == 7 || i == 10){
                 if(i == 13){
                     continue;
                 }
+
                 SchollMolo[i] = "Гимназия № " + b + ": ";
+                continue;
+            }
+
+            if (b == 15) {
+                SchollMolo[i] = "Начальная № " + b + ": ";
                 continue;
             }
             SchollMolo[i] = "Средняя школа № " + b + ": ";
@@ -140,33 +150,33 @@ public class SettingsSchools {
             if(b == 13){
                 continue;
             }
-            if(i == 1) {
+            if(b == 1) {
                 System.out.println(b + ") " + SchollMolo[i] + "222310, Минская обл., г. Молодечно, ул. Великосельская, 2");
-            } else if (i == 2) {
+            } else if (b == 2) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская область, Молодечненский р-н, г.Молодечно, ул. Чкалова, 6");
-            } else if (i == 3) {
+            } else if (b == 3) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская обл, г. Молодечно, ул. Виленская, д.62");
-            }else if (i == 4) {
+            }else if (b == 4) {
                 System.out.println(b + ") " + SchollMolo[i] + "г. Молодечно, ул. Волынца, д. 3");
-            }else if (i == 5) {
+            }else if (b == 5) {
                 System.out.println(b + ") " + SchollMolo[i] + "222310, г. Молодечно, площадь Старое Место, 16");
-            }else if (i == 6) {
+            }else if (b == 6) {
                 System.out.println(b + ") " + SchollMolo[i] + "222310, Минская обл., г.Молодечно, ул. В.Гостинец, 66");
-            }else if (i == 7) {
+            }else if (b == 7) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская область, г. Молодечно, ул. Громадовская, 17");
-            }else if (i == 8) {
+            }else if (b == 8) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская область, г.Молодечно,ул.Космонавтов, д.3");
-            }else if (i == 9) {
+            }else if (b == 9) {
                 System.out.println(b + ") " + SchollMolo[i] + "222306, Минская область, г. Молодечно, ул. Ларина, д.2");
-            }else if (i == 10) {
+            }else if (b == 10) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская обл., г. Молодечно, ул. Богдана Хмельницкого, д. 20");
-            }else if (i == 11) {
+            }else if (b == 11) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская обл., г. Молодечно, ул. Ф.Скорины, 7");
-            }else if (i == 12) {
+            }else if (b == 12) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская обл., г. Молодечно, ул. Ф.Скорины, 45");
-            }else if (i == 14) {
+            }else if (b == 14) {
                 System.out.println(b + ") " + SchollMolo[i] + "Минская область, г. Молодечно, ул. В. Гостинец, д. 153");
-            }else if (i == 15) {
+            }else if (b == 15) {
                 System.out.println(b + ") " + SchollMolo[i] + "222302, г. Молодечно, ул. Великий Гостинец, 144а");
             }
         }
